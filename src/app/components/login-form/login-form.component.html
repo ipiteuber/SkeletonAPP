@@ -1,0 +1,44 @@
+<div class="login-wrapper">
+  <form class="login-form" (ngSubmit)="login()">
+    <ion-card class="login-card">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Login</ion-card-title>
+        <ion-card-subtitle class="ion-text-center">Enter your credentials</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input
+            id="nameUser"
+            type="text"
+            [(ngModel)]="data.user"
+            name="user"
+            maxlength="8"
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="isUserInvalid()">
+          <p class="ion-padding-start">Must be 3 to 8 alphanumeric characters.</p>
+        </ion-text>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input
+            type="password"
+            inputmode="numeric"
+            maxlength="4"
+            [(ngModel)]="data.pwd"
+            name="pwd"
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="isPwdInvalid()">
+          <p class="ion-padding-start">Must be exactly 4 numeric digits.</p>
+        </ion-text>
+
+        <ion-button expand="block" type="submit" class="ion-margin-top">Login</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</div>

@@ -1,0 +1,10 @@
+ion-toolbar {
+  --background: #725B5A;
+  --color: #ffffff;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+ion-toolbar::part(native) {
+  border-bottom: none !important;
+}

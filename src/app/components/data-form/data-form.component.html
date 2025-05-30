@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+  <ion-item [@shake]="shakeName">
+    <ion-label position="floating">First Name</ion-label>
+    <ion-input formControlName="name"></ion-input>
+  </ion-item>
+
+  <ion-item [@shake]="shakeLastName">
+    <ion-label position="floating">Last Name</ion-label>
+    <ion-input formControlName="lastName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Education Level</ion-label>
+    <ion-input formControlName="education"></ion-input>
+  </ion-item>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Birth Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="birthDate" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="buttons-container">
+    <ion-button color="medium" (click)="clearFields()">Clear</ion-button>
+    <ion-button (click)="showData()">Show</ion-button>
+  </div>
+</form>

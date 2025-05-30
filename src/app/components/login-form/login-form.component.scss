@@ -1,0 +1,61 @@
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-card {
+  background: #ffffff;
+  color: #000000;
+  --ion-background-color: #ffffff;
+  --ion-item-background: #ffffff;
+  --ion-text-color: #000000;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+ion-item {
+  --background: #ffffff;
+  --color: #000000;
+  margin-bottom: 12px;
+}
+
+ion-button {
+  --background: #896E6C;
+  --color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  --box-shadow: none;
+}
+
+ion-button:disabled {
+  --background: #c2b6b5;
+  --color: #666666;
+}
+
+ion-text {
+  font-size: 0.9rem;
+  color: #e84118;
+}
+
+ion-card-title,
+ion-card-subtitle {
+  color: #333333;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 0 10px;
+  }
+}

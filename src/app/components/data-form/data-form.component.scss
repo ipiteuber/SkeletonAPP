@@ -1,0 +1,109 @@
+form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ion-item {
+  --background: #ffffff;
+  --color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+
+  &.ng-invalid.ng-touched {
+    box-shadow: 0 0 0 2px #e74c3c;
+  }
+}
+
+ion-label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+ion-input {
+  font-size: 1rem;
+}
+
+mat-form-field {
+  width: 100%;
+  margin: 16px 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 0 0.75rem;
+
+  input.mat-input-element {
+    font-size: 1rem;
+    background: transparent;
+    color: #4a3b39 !important;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .mat-form-field-wrapper {
+    padding: 0.5rem 0;
+  }
+
+  .mat-datepicker-toggle {
+    color: #896E6C;
+  }
+}
+
+::ng-deep .mat-datepicker-content {
+  background: rgba(255, 255, 255, 0.708) !important;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  color: #4a3b39 !important; /* texto visible */
+}
+
+::ng-deep .mat-calendar-body-cell-content {
+  color: #4a3b39 !important;
+  font-weight: 500;
+}
+
+::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected) .mat-calendar-body-cell-content {
+  border-bottom: 2px solid #896E6C;
+  font-weight: 600;
+  color: #896E6C !important;
+}
+
+::ng-deep .mat-calendar-body-selected .mat-calendar-body-cell-content {
+  background-color: #896E6C !important;
+  color: #fff !important;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+ion-button {
+  flex: 1;
+  --background: #896E6C;
+  --color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+ion-button:disabled {
+  --background: #c2b6b5;
+  --color: #666666;
+  --box-shadow: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
